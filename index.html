@@ -1,18 +1,55 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Test.GitHub.io by zmc1994</title>
-  </head>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录页面</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="top_div"></div>
+<div class="form">
+	<div class="mty">
+		<div class="tou"></div>
+		<div class="initial_left_hand" id="left_hand"></div>
+		<div class="initial_right_hand" id="right_hand"></div>
+	</div>
+	<P class="id">
+		<span class="u_logo"></span>
+		<input class="ipt" type="text" placeholder="请输入用户名" value=""> 
+	</P>
+	<P class="pss">
+		<span class="p_logo"></span>         
+		<input class="ipt" id="password" type="password" placeholder="请输入密码" value="">   
+ 	</P>
+	<div class="form-bottom">
+	<P class="bottom-text">
+		<span class="wjmp">
+			<a href="#">忘记密码?</a>
+		</span> 
+    	<span class="zc">
+    		<a href="#">注册</a>  
+    		<a class="login" href="#">登录</a>
+    	</span>
+    </P>
+	</div>
+</div>
 
-  <body>
-
-    <header>
-      <div class="container">
-        <h1>周明超欢迎您</h1>
-      </div>
-    </header>
-    <p>今天是2016年九月28日,离国庆还有三天</p>
-  </body>
+<script>
+	var passElement = document.getElementById('password');
+	passElement.onfocus = function (){
+		var left = document.getElementById('left_hand');
+		var right = document.getElementById('right_hand');
+		left.className = 'left_hand';
+		left.style.transition = 'all,.5s';
+		right.className = 'right_hand';
+		right.style.transition = 'all,.5s';
+	}
+	passElement.onblur = function (){
+		var left = document.getElementById('left_hand');
+		var right = document.getElementById('right_hand');
+		left.className = 'initial_left_hand';
+		right.className = 'initial_right_hand';
+	}
+</script>
+</body>
 </html>
