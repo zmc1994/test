@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .btn{
+            width: 100px;
+            height: 50px;
+            border-radius: 5px;
+            background: #f4f4f4;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0 1px 2px #000;
+            cursor: pointer;
+            outline: none;
+        }
+        .numberWrap{
+            width: 1000px;
+            margin: 100px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="numberWrap">
+       
+    </div>
+    <button class="btn">启动</button>
+    <script>
+        $(function(){
+            $('.btn').on('click',function(){
+                var arr=[];
+                for(var i = 0;i <= 6; i++){
+                    var num = parseInt(Math.random()*32+1);
+                    if(arr.indexOf(num) == -1){
+                        arr.push(num);
+                    }
+                }
+                var num2 = parseInt(Math.random()*15+1);
+                alert(arr+"-----"+num2);
+            })
+        })
+    </script>
+</body>
+</html>
